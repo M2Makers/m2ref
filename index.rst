@@ -1,12 +1,8 @@
-.. M2 documentation master file.
+.. M2 reference master file.
 
 
-M2 완벽 가이드
+M2 Reference
 ==========================
-
-
-:저자: M2 개발팀
-:최신버전: v20.11.0
 
 
 1부. M2 Overview

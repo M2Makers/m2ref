@@ -1,7 +1,7 @@
 nghttpx(1)
 ==========
 
-SYNOPSIS
+SYNOPSIS11
 --------
 
 **nghttpx** [OPTIONS]... [<PRIVATE_KEY> <CERT>]

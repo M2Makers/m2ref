@@ -3,7 +3,7 @@
 
 .. program:: nghttpx
 
-nghttpx(1)
+sample test - nghttpx(1)
 ==========
 
 SYNOPSIS

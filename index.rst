@@ -12,4 +12,12 @@ M2 Reference
    :maxdepth: 2
 
    guide/intro
+   guide/arch
+   guide/comp_global
+   guide/comp_vhost
+   guide/api
+   guide/cli
+   guide/demo
+   
+   guide/nghttpx
    guide/test1

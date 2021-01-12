@@ -1,10 +1,10 @@
 ***************************************
-API documentation and generated content
+sample test  API documentation and generated content
 ***************************************
 
 .. contents:: Table of Contents
 
-:mod:`test_py_module`
+- :mod:`test_py_module`
 =====================
 
 .. automodule:: test_py_module.test

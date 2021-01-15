@@ -15,10 +15,8 @@ M2 Reference
    guide/arch
    guide/comp_global
    guide/comp_vhost
-   guide/comp_vhost
    guide/api
    guide/cli
    guide/demo
+   guide/tips
    
-   guide/nghttpx
-   guide/test1

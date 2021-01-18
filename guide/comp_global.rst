@@ -108,9 +108,9 @@ memory
 
     :option:`systemRatio` 적용 후, 시스템 Free영역비율. 최대 ``40``
 
-.. data:: contentRatio=<PERCENTAGE>
+.. data:: contentsRatio=<PERCENTAGE>
 
-    솔루션 가용메모리 중 Payload 적재비율
+    솔루션 가용메모리 중 Contents 적재비율
 
 
 cleanUp

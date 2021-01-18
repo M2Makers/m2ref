@@ -63,7 +63,7 @@ storage
 
 .. data:: error
 
-    *  :option:`cycle` 동안 :option:`count` 만큼 I/O가 실패하면 디스크 배제
+    :option:`cycle` 동안 :option:`count` 만큼 I/O가 실패하면 디스크 배제
 
     .. option:: cycle=<N>
 

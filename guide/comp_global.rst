@@ -15,13 +15,15 @@ m2.global.cacheEnv
 
     "cacheEnv" : {
         "storage" : {
-            "failSec": 60,
-            "failCount": 10,
-            "onCrash": "hang",
             "disks" : [
                 { "path": "/cache1" }, 
-                { "path": "/cache2" }, 
-            ]
+                { "path": "/cache2",  "quota": 100 }, 
+            ],
+            "error": {
+                "cycle": 60,
+                "count": 10,
+                "onEvent": "invalid"
+            }
         },
         "memory": {
             "systemRatio": 100,
@@ -38,9 +40,22 @@ m2.global.cacheEnv
     }
 
 
+m2.global.cacheEnv.storage
+------
+
 .. data:: storage
 
-    ``failSec`` 동안 ``failCount`` 만큼 디스크 I/O가 실패하면 해당 디스크는 자동으로 배제된다. 
+    .. data:: disks
+
+        *  콘텐츠 저장 디스크 목록
+        *  최대 개수 255개
+        *  미구성시 메모리 모드로 동작
+        
+        *  path - 디스크 경로
+        *  quota - 디스크 최대 캐싱용량
+
+
+    *  ``failSec`` 동안 ``failCount`` 만큼 디스크 I/O가 실패하면 해당 디스크는 자동으로 배제된다. 
         배제된 디스크 상태는 `` "Invalid" ``로 표기된다.
 
     .. data:: failSec=<N>

@@ -4,11 +4,6 @@
 m2.global
 ******************
 
-모든 가상호스트에서 공용으로 사용하는 컴포넌트 또는 
-
-``전역 컴포넌트`` 란 ``Runtime`` 내의 모든 가상호스트, 함수들이 공용으로 사용하는 컴포넌트를 의미한다. 
-대표적으로 캐시가 존재한다.
-
 
 cacheEnv
 =======
@@ -25,10 +20,15 @@ cacheEnv
                 "cycle": 60,
                 "count": 10,
                 "onCrash": "invalid"
+            },
+            "cleanUp": {
+                "diskSize": 0,
+                "indexCount": 0
             }
         },
         "memory": {
             "systemRatio": 100,
+            "systemFreeRatio": 40
             "contentRatio": 50
         },
         "cleanUp": {
@@ -65,11 +65,11 @@ storage
 
     :option:`cycle` 동안 :option:`count` 만큼 I/O가 실패하면 디스크 배제
 
-    .. option:: cycle=<N>
+    .. option:: cycle=<SEC>
 
-        실패 카운팅 주기(초)
+        실패 카운팅 주기
     
-    .. option:: count=<N>
+    .. option:: count=<COUNT>
 
         최대 실패회수
 
@@ -82,12 +82,31 @@ storage
         *  ``selfkill`` - 데몬 종료
 
 
+.. data:: cleanUp
+
+    저장한계 도달시 삭제정책
+
+    .. option:: diskSize=<GB>
+
+        *  미설정시(또는 ``0``) 디스크 용량의 20% 삭제
+        *  설정시 해당 용량만큼 디스크 삭제
+
+    .. option:: indexCount=<COUNT>
+
+        *  미설정시(또는 ``0``) 인덱싱 10% 삭제
+        *  설정시 해당 개수만큼만 인덱싱 삭제
+
+
 memory
 ------
 
 .. data:: systemRatio=<PERCENTAGE>
 
     물리 메모리 사용비율. 예를 들어 8GB인 환경에서 이 값이 ``50`` 이라면 4GB로 처리함
+
+.. data:: systemFreeRatio=<PERCENTAGE>
+
+    :option:`systemRatio` 적용 후, 시스템 Free영역비율. 최대 ``40``
 
 .. data:: contentRatio=<PERCENTAGE>
 
@@ -130,5 +149,8 @@ config
 미분류 ``TO DO``
 =======
 
-
 *  <Server><Cache><Listen>
+*  <Server><Cache><MaxSockets Reopen="75">80000</MaxSockets>
+*  <Server><Cache><HttpClientSession>
+*  <EmergencyMode>OFF</EmergencyMode>
+*  <SyncStale>ON</SyncStale>

@@ -19,7 +19,7 @@ cacheEnv
             "error": {
                 "cycle": 60,
                 "count": 10,
-                "onCrash": "invalid"
+                "onCrash": "hang"
             },
             "cleanUp": {
                 "diskSize": 0,
@@ -121,7 +121,7 @@ cleanUp
 
 .. data:: time=<mm:ss>
 
-    시작시간
+    시작시간 (기본: ``02:00``)
 
 .. data:: age=<N>
 

@@ -1,14 +1,14 @@
 
 .. program:: M2
 
-Global Componenets
+m2.global
 ******************
 
 ``전역 컴포넌트`` 란 ``Runtime`` 내의 모든 가상호스트, 함수들이 공용으로 사용하는 컴포넌트를 의미한다. 
 대표적으로 캐시가 존재한다.
 
 
-m2.global.cacheEnv
+cacheEnv
 =======
 
 ``m2.vhost.cache`` 구동환경을 구성한다. ::
@@ -40,41 +40,37 @@ m2.global.cacheEnv
     }
 
 
-m2.global.cacheEnv.storage
+storage
 ------
 
-.. data:: storage
+.. data:: disks
 
-    .. data:: disks
+    *  콘텐츠 저장 디스크 목록
+    *  최대 개수 255개
+    *  미구성시 메모리 모드로 동작
 
-        *  콘텐츠 저장 디스크 목록
-        *  최대 개수 255개
-        *  미구성시 메모리 모드로 동작
+    .. data:: path=<PATH>
+
+        디스크 경로
+
+    .. data:: quota=<N>, GB
         
-        *  path - 디스크 경로
-        *  quota - 디스크 최대 캐싱용량
+        디스크 최대 캐싱용량
 
 
-    *  ``failSec`` 동안 ``failCount`` 만큼 디스크 I/O가 실패하면 해당 디스크는 자동으로 배제된다. 
-        배제된 디스크 상태는 `` "Invalid" ``로 표기된다.
+.. data:: error
 
-    .. data:: failSec=<N>
+    *  :option:`cycle` 동안 :option:`count` 실패하면 디스크 배제
 
-        Default: ``60`` 초
+    .. option:: cycle=<N>, 초
 
-    .. data:: failCount=<N>
+        실패 체크주기
 
-        Default: ``10`` 회
+    
+    .. option:: count=<N>, 회
 
-    .. note::
+        최대 실패회수
 
-        ``failSec`` 동안 ``failCount`` 만큼 디스크 I/O가 실패하면 해당 디스크는 자동으로 배제된다. 
-        배제된 디스크 상태는 `` "Invalid" ``로 표기된다.
-
-
-    .. data:: failCount=<N>
-
-        Default: ``10`` 회
 
 
 

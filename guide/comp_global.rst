@@ -152,5 +152,5 @@ config
 *  <Server><Cache><Listen>
 *  <Server><Cache><MaxSockets Reopen="75">80000</MaxSockets>
 *  <Server><Cache><HttpClientSession>
-*  <EmergencyMode>OFF</EmergencyMode>
-*  <SyncStale>ON</SyncStale>
+*  <Server><Cache><EmergencyMode>OFF</EmergencyMode>
+*  <Server><Cache><SyncStale>ON</SyncStale>

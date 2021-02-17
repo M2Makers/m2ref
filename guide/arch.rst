@@ -8,10 +8,10 @@ Architecture
 
 
 
-Architecture
+구조
 -----------------------
 
-계층적 구조는 다음과 같다.
+구조는 다음과 같다.
 
 .. figure:: img/0001.png
    :align: center
@@ -20,10 +20,9 @@ Architecture
 
 *  ``Core`` - M2 라이프 사이클, 인터페이스 제공, 설정관리, 라이선스 관리
 *  ``Runtime`` - 서비스 런타임, 컴포넌트 관리, 시스템 인터페이스
-*  ``Components`` - HTTP, SSL/TLS, 캐시, 도큐먼트, 이미지, 비디오, 압축, 암호화 등등
 *  ``Virtual Host`` - 가상호스트, 로그, 통계, 세션, 라우팅, 업/다운 스트림
-*  ``Function Chain`` - 워크로드 라이브러리, 체이닝, 체인 컨테이너, 커스터마이징
-*  ``Workload`` - On the fly 비지니스 로직
+*  ``Service Chain`` - 모듈과 함수의 연결/관리, 파이프라인, 외부통신, 분기, 트레이스
+*  ``Workload`` - 비지니스 로직, 콘텐츠 생산
 
 
 종속성과 동작 플로우는 다음과 같다.

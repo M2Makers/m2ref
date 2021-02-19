@@ -33,7 +33,7 @@ Architecture
 
 
 
-``Call Chain``
+Call Chain
 -----------------------
 
 ``Call Chain`` 은 `Open Tracing <https://opentracing.io/>`_ 의 SPANS 와 TRACE 개념에 기반한다.

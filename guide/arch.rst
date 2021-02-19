@@ -36,7 +36,7 @@ Architecture
 Call Chain
 -----------------------
 
-``Call Chain`` 은 `Open Tracing <https://opentracing.io/>`_ 의 SPANS 와 TRACE 개념에 기반한다.
+``Call Chain`` 동작방식은 `Open Tracing <https://opentracing.io/>`_ 의 SPANS 와 TRACE 개념으로 이해가 가능하다.
 
 .. figure:: img/opentracing.png
    :align: center
@@ -49,22 +49,24 @@ HTTP Transaction은 ``Runtime`` 에 의해 여러 가상호스트를 연결하�
 
 
 가상호스트 단위에서 모듈과 함수를 각각 연결하여 비지니스 로직의 구현이 가능하다.
-"임의의 외부 이미지를 다운로드/RESIZE 한 뒤 캐싱 서비스한다." 라면 다음과 같은 모듈 체인이 구성된다.
+"임의의 외부 이미지를 다운로드/RESIZE 한 뒤 캐싱 서비스한다." 라면 다음과 같이 모듈을 연결한 ``Call Chain`` 을 구성한다.
 
 .. figure:: img/0004.png
    :align: center
 
-보다 복잡하고 정교한 비지니스 로직을 구현하려면 더 작은 단위의 함수 체인를 구성할 수 있다.
+보다 복잡하고 정교한 비지니스 로직을 구현하려면 더 작은 단위의 함수를 연결한 ``Call Chain`` 를 구성한다.
 
    .. figure:: img/0006.png
       :align: center
 
 
 
-가상호스트 체인
+모듈
 -----------------------
 
+모듈은 
 
 
-함수 체인
+
+함수
 -----------------------

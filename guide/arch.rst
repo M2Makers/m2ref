@@ -40,20 +40,20 @@ Call Chain
 
 ``Call Chain`` 은 ``HTTP Transaction`` 을 처리하는 일종의 Micro Service Bus로 3가지 흐름이 존재한다.
 
-1. ``Runtime`` 에 의한 가상호스트 간 ``Call Chain``
+1. ``Runtime`` 에 의한 가상호스트 사이의 연결
 
    .. figure:: img/0005.png
       :align: center
 
 
-2. ``Virtual Host`` 내에 사전 정의된 암묵적 ``Call Chain``.
+2. ``Virtual Host`` 내에 사전 정의된 모듈의 연결.
    대표적으로 "임의의 외부 이미지를 다운로드/RESIZE 한 뒤 캐싱 서비스한다." 라면 복잡한 구성없이 모듈 활성화만으로 ``Call Chain`` 을 구성한다.
 
    .. figure:: img/0004.png
       :align: center
 
 
-3. ``Virtual Host`` 내에 명시적으로 설정된 ``Call Chain``.
+3. ``Virtual Host`` 내에 사용자가 임의로 구성한 연결.
    임의의 비지니스 로직 구현이나 Legacy 연계에 적합하다.
 
    .. figure:: img/0006.png

@@ -53,8 +53,8 @@ Call Chain
       :align: center
 
 
-3. ``Virtual Host`` 내에 사용자가 임의로 구성한 연결.
-   임의의 비지니스 로직 구현이나 Legacy 연계에 적합하다.
+3. ``Virtual Host`` 내에 관리자가 임의로 구성한 연결.
+   복잡한 비지니스 로직 구현이나 Legacy 연계에 적합하다.
 
    .. figure:: img/0006.png
       :align: center
